@@ -35,13 +35,33 @@ String.prototype.extension = function (): string {
 
 // Start application
 import fs = require('fs');
+// import child = require('child_process')
+
+var exec = require('child_process').exec;
+
+
 
 const inputFolder = './input';
 const targetFolder = './target';
 
 fs.readdirSync(inputFolder).forEach(file => {
     if (file.extension() === 'uml') {
-
+        let params:string = [
+            'java',
+            '-jar',
+            './src/lib/saxon9he.jar',
+            './input/model.uml',
+            './src/xslt/merge.xslt',
+            '-o:./target/model.uml'
+        ].join(' ')
+        const child = exec(params,
+            function (error: string, stdout: string, stderr: string) {
+                if (error !== null) {
+                    console.log("Error -> " + error);
+                } 
+                console.log(stdout);
+                console.log('translated');
+            });
     } else {
         if (!fs.existsSync(targetFolder)) {
             fs.mkdirSync(targetFolder);
