@@ -1,7 +1,6 @@
 /docs/
-<<<<<<< HEAD
 /node_modules/
 /src/js/
 /target/
-=======
->>>>>>> branch 'master' of https://github.com/demx8as6/uml-migration.git
+/temp/
+*.jar
