@@ -50,4 +50,4 @@ fs.readdirSync(inputFolder).forEach(file => {
     }
 })
 
-console.info('Finished! Please check folde:r', targetFolder);
+console.info('Finished! Please check folder:', targetFolder);
