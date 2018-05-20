@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * (C) Copyright 2018 highstreet technologies (http://highstreet-technologies.com) and others.
  *
@@ -51,3 +52,12 @@ fs.readdirSync(inputFolder).forEach(file => {
 })
 
 console.info('Finished! Please check folde:r', targetFolder);
+=======
+function greeter(person:string) {
+    return "Hello, " + person;
+}
+
+let user = "Jane User";
+
+console.info(greeter(user));
+>>>>>>> branch 'master' of https://github.com/demx8as6/uml-migration.git
