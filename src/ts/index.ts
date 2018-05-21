@@ -49,7 +49,7 @@ import fs = require('fs');
 
 const exec = require('child_process').exec;
 
-const inputFolder: string = './input';
+const sourceFolder: string = './source';
 const targetFolder: string = './target';
 const tempFolder: string = './temp';
 
@@ -69,7 +69,6 @@ if (!fs.existsSync(targetFolder)) {
 if (!fs.existsSync(tempFolder)) {
     fs.mkdirSync(tempFolder);
 }
-
 
 // enum
 enum Modification {
@@ -102,17 +101,17 @@ function modifiy(inFile: string, outFileName: string, direction: Modification): 
     });
 }
 
-// scan input folder
-fs.readdirSync(inputFolder).forEach(file => {
+// scan source folder
+fs.readdirSync(sourceFolder).forEach(file => {
 
     // copy not modified files to target
     if (file.extension() !== toBeModifiedExtension) {
-        fs.copyFileSync([inputFolder, file].join('/'), [targetFolder, file].join('/'))
+        fs.copyFileSync([sourceFolder, file].join('/'), [targetFolder, file].join('/'))
     }
 
     // prepare uml and notation for xslt
     if (extensionsForTemps.indexOf(file.extension()) !== -1) {
-        const inFile: string = fs.readFileSync([inputFolder, file].join('/'), 'utf8');
+        const inFile: string = fs.readFileSync([sourceFolder, file].join('/'), 'utf8');
         const outFileName: string = [tempFolder, file].join('/');
         const modification: Modification = Modification.removeNamespaces;
         modifiy(inFile, outFileName, modification);
@@ -127,7 +126,8 @@ fs.readdirSync(inputFolder).forEach(file => {
             tempFolder + '/' + file.name() + '.' + toBeModifiedExtension,
             './src/xslt/merge.xslt',
             '-o:' + tempFolder + '/' + file.name() + '.' + toBeModifiedExtension + '.temp',
-            'model=' + file.name()
+            'model=' + file.name(),
+            'sourceFolder=../../' + tempFolder
         ].join(' ')
 
         console.info('executing:', params);
