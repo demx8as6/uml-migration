@@ -29,6 +29,10 @@ npm install
 
 ## Usage
 
+Copy the papyrus project of Mars version to ./source folder.
+
 ```
 npm run start
 ```
+
+The merged papyrus project for version Oxygen can be found in the ./target folder.
