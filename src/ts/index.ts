@@ -100,9 +100,7 @@ function modifiy(inFile: string, outFileName: string, direction: Modification): 
         }
         console.info('Finished! Please check:', outFileName);
     });
-
 }
-
 
 // scan input folder
 fs.readdirSync(inputFolder).forEach(file => {
