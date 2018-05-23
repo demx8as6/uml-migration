@@ -42,8 +42,8 @@
 		<xsl:variable name="target-id" select="fn:substring-after( key( 'nodeByXmiId', @target)/element/@href, '#' )"/>
 		<xsl:variable name="association-id" select="fn:substring-after( ./element[@xmi-type='uml:Association']/@href, '#' )"/>
 		<xsl:variable name="member-end" select="key('nodeByXmiId', $association-id, $umlLookup)/@memberEnd"/>
-		<xsl:variable name="source-attribute-id" select="fn:substring-after( $member-end, ' ' )"/>
-		<xsl:variable name="target-attribute-id" select="fn:substring-before( $member-end, ' ' )"/>
+		<xsl:variable name="source-attribute-id" select="fn:substring-before( $member-end, ' ' )"/>
+		<xsl:variable name="target-attribute-id" select="fn:substring-after( $member-end, ' ' )"/>
 		<xsl:variable name="current">
 			<xsl:value-of select="key('nodeByXmiId', $source-id, $umlLookup)/@name"/>
 			<xsl:text> to </xsl:text>

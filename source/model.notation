@@ -58,7 +58,7 @@
     <owner xmi:type="uml:Model" href="model.uml#_hkdx0AEKEeiCYYSaesb3pA"/>
   </styles>
   <element xmi:type="uml:Model" href="model.uml#_hkdx0AEKEeiCYYSaesb3pA"/>
-  <edges xmi:type="notation:Connector" xmi:id="_ZibRMAEOEeiCYYSaesb3pA" type="4001" source="_ZiQ5IAEOEeiCYYSaesb3pA" target="_ZiIWQAEOEeiCYYSaesb3pA">
+  <edges xmi:type="notation:Connector" xmi:id="_ZibRMAEOEeiCYYSaesb3pA" type="4001" source="_ZiIWQAEOEeiCYYSaesb3pA" target="_ZiQ5IAEOEeiCYYSaesb3pA">
     <children xmi:type="notation:DecorationNode" xmi:id="_ZibRMwEOEeiCYYSaesb3pA" type="6001">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_ZibRNAEOEeiCYYSaesb3pA" y="-20"/>
     </children>
@@ -80,7 +80,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ZibRMQEOEeiCYYSaesb3pA"/>
     <element xmi:type="uml:Association" href="model.uml#_w6FwoAENEeiCYYSaesb3pA"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZibRMgEOEeiCYYSaesb3pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_afKmQAEOEeiCYYSaesb3pA" id="(1.0,0.5)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_afLNUAEOEeiCYYSaesb3pA" id="(0.0,0.49)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_afKmQAEOEeiCYYSaesb3pA" id="(0.0,0.49)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_afLNUAEOEeiCYYSaesb3pA" id="(1.0,0.5)"/>
   </edges>
 </notation:Diagram>
