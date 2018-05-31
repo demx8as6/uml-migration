@@ -55,9 +55,20 @@ const tempFolder: string = './temp';
 
 const mapping = new Map<string, string>();
 mapping.set("xmlns:", "xmlns-");
+mapping.set("css:", "css-");
+mapping.set("ecore:", "ecore-");
 mapping.set("notation:Diagram", "notation-Diagram");
+mapping.set("notation:IdentityAnchor", "notation-IdentityAnchor");
 mapping.set("uml:Model", "uml-Model");
+mapping.set("xsi:", "xsi-");
 mapping.set("xmi:", "xmi-");
+
+mapping.set("InterfaceModel_Profile:", "InterfaceModel_Profile-");
+mapping.set("OpenModel_Profile:", "OpenModel_Profile-");
+mapping.set("OpenModel_Profile_1:", "OpenModel_Profile_1-");
+mapping.set("OpenModel_Profile_2:", "OpenModel_Profile_2-");
+mapping.set("OpenModel_Profile_3:", "OpenModel_Profile_3-");
+mapping.set("OpenInterfaceModel_Profile:", "OpenInterfaceModel_Profile-");
 
 const toBeModifiedExtension: string = 'notation'
 const extensionsForTemps: Array<string> = [toBeModifiedExtension, 'uml']
